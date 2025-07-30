@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人GitHub主页</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            line-height: 1.6;
+            margin: auto;
+            max-width: 600px;
+        }
+        .header {
+            text-align: center;
+        }
+        button {
+            padding: 10px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 id="title">Welcome to My GitHub Projects</h1>
+        <p id="description">Here you can find all my projects and contributions to the open-source community.</p>
+        <button onclick="switchLanguage('en')">English</button>
+        <button onclick="switchLanguage('zh')">中文</button>
+    </div>
+
+    <script>
+        const textContent = {
+            "en": {
+                "title": "Welcome to My GitHub Projects",
+                "description": "Here you can find all my projects and contributions to the open-source community."
+            },
+            "zh": {
+                "title": "欢迎来到我的GitHub项目页",
+                "description": "在这里，你可以找到我所有的项目和对开源社区的贡献。"
+            }
+        };
+
+        function switchLanguage(lang) {
+            document.getElementById('title').textContent = textContent[lang].title;
+            document.getElementById('description').textContent = textContent[lang].description;
+        }
+    </script>
+</body>
+</html>
